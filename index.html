@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valt het kwartje?</title>
+    <link rel="stylesheet" href="style.css">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game_viewport">
+        <!--div for a certain part in the game where the player needs to choose which city they will live in-->
+        <div id="pickLocation"> 
+            <h6>Kies een locatie voor je huurwoning:</h6>
+            <select id="locations">
+                <option name="Blank"></option>
+                <option name="Sneek">Sneek</option>
+                <option name="Leeuwarden">Leeuwarden</option>
+                <option name="Drachten">Drachten</option>
+                <option name="Franeker">Franeker</option>
+                <option name="Balk">Balk</option>
+                <option name="Heerenveen">Heerenveen</option>
+            </select>
+        </div>
+        <!--Div in which the entire game will play-->
+        <div class = "hidden">
+        </div>
+        <!--Button which will start the entire game-->
+        <button id="start_game"> 
+            <h1>Start spel</h1>
+        </button> 
+    </div>
+
+    <!--dialog for when a house needs to be selected, to act as an extra confirmation before the player has chosen a house-->
+    <dialog>
+        <div class="extraConfirmation">
+            <h3>Weet je zeker dat je dit huis wil huren?</h3>
+            <button id="jaHuis" class="huisConfirmatie">Ja</button>
+            <button id="neeHuis" class="huisConfirmatie">Nee</button>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
