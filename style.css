@@ -3,7 +3,7 @@
 }
 
 .game_viewport {
-    background-color: #D8F5FF;
+    background-color: black;
     width: auto;
     height: 844px;
     padding: 0px;
@@ -15,26 +15,21 @@
     top: 45%;
     left: 30%;
     margin: auto;
-    background-color: #0095C5;
-    color: white;
+    background-color: #00b1eb;
+    color: #4a4a49;
     padding: 5px;
     width: 165px;
     height: fit-content;
-    border: 0px;
-    border-radius: 5px;
 }
 
 .visible {
-    background-color: white;
-    min-height: 844px;
-    height: fit-content;
+    background-color: pink;
+    height: 1688px;
     margin-top: 0px;
     width: auto;
-    animation: fade-in 5s;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
+    animation: fade-in 10s;
+    display: grid;
+    grid-template: repeat(20,5%) / repeat(10, 10%);
 }
   
 .hidden {
@@ -42,6 +37,8 @@
     animation: fade-in 10s;
     height: 844px;
     width: 90%;
+    display: grid;
+    grid-template: repeat(10,10%), repeat(20, 5%);
 }
 
 @keyframes fade-in {
@@ -63,37 +60,26 @@
 }
 
 .Jobs {
-    background-color: #91dbf4;
-    border: solid #91dbf4;
-    height: 80px;
-    width: 80%;
-    border-radius: 25px;
+    background-color: #bf0042;
+
 }
 
-h2 {      
-    color: #0095C5;  
+h2 {  
+    background-color: #bf0042;    
+    color: white;  
     height: fit-content;
     width: fit-content;
     margin: auto;
-    top: 70%;
-    position: relative;  
-    font-weight: 400;  
+    top: 50%;
+    position: relative;    
 }
-
-h5 {
-    margin-left: 10%;
-}
-
 
 .continueButtons {
-    background-color: #0095C5;
-    padding: 15px;
-    margin: 1px;
-    order: 10;
-    border: 0px;
-    border-radius: 5px;
-    font-weight: 500;
-    color: white;
+    background-color: white;
+    border: 5px solid black;
+    margin: 2px;
+    grid-row: 10;
+    grid-column: 10;
 }
 
 button {
@@ -106,8 +92,6 @@ button {
     background-color: white;
     margin: 5px;
     box-shadow: 2px 5px black;
-    order: 2;
-    flex-basis: 40%;
 }
 
 h3 {
@@ -117,24 +101,14 @@ h3 {
 
 .hobbys {
     border-radius: 25px;
-    background-color: #E7F9FF;
-    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.196);
-    border: 0px;
-    order: 2;
-    height: 100px;
-    width: 20%;
-    margin: 0px 5%;
+    border: solid #bf0042;
+    background-color: white;
 }
 
 .hobbysSelected {
     border-radius: 25px;
-    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.196);
-    border: 0px;
-    background-color: #0095C5;
-    order: 2;
-    height: 100px;
-    width: 20%;
-    margin: 0px 5%;
+    border: solid white;
+    background-color: #bf0042;
 }
 
 #hobbyList {
@@ -148,30 +122,16 @@ h3 {
 .selectAHouse {
     background-color: grey;
     border-radius: 15px;
-    height: 200px;
-    width: 80%;
-    margin: 0px 10%;
-    order: 3;
 }
 
 .HouseSelection {
-    height: 25px;
-    align-self: baseline;
-    border: solid #00b1eb;
-    border-radius: 10px;
-    background-color: white;
+    background-color: #00b1eb;
 }
 
 .thisHouse {
     background-color: #00b1eb;
+    grid-area: 2 / 2 / span 5 / span 5;
     border-radius: 15%;
-    align-self: baseline;
-}
-
-#houseName {
-    color: #0095C5;
-    height: 25px;
-    align-self: baseline;
 }
 
 #jaHuis {
@@ -189,25 +149,15 @@ h3 {
 
 #showLocations {
     opacity: 100%;
-    width: 100%;
-    order: 1;
+    background-color: hotpink;
+    width: 80%;
+    grid-area: 2 / 3 / span 1 / span 6;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-h6 {
-    color: #0095C5;
-    flex-basis: 100%;
-    margin: 15px 25%;
 }
 
 select {
     height: fit-content;
     margin: auto;
-    flex-basis: 100%;
-    order: 1;
-    margin: 0px 15%;
 }
 
 #yourJob {
@@ -215,67 +165,16 @@ select {
     width: 100px;
     height: 100px;
     border: solid red;
+    grid-area: 2 / 5 / span 2 / span 2;
 }
 
 #overviewOutcome {
     background-color: grey;
+    grid-area: 6 / 1 / span 10 / span 10;
     border-radius: 15px 15px 0px 0px;
-    z-index: 10;
 }
 
 .allOutcomes {
-    background-color: #F6F6F6;
+    background-color: #bf0042;
     border-radius: 25px;
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
 }
-
-#theSelectedJob{
-    height: 350px;
-    margin: 0px 20px;
-    border-radius: 25px;
-    flex-grow: 10;
-    order: 1;
-    flex-basis: 80%;
-}
-
-.showProfile {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    background-color: #DCE7F5;
-    margin: auto;
-}
-
-.showTheMoney {
-    background-color: #DCE7F5;
-    order: 5;
-    width: 100%;
-    border-radius: 50px 50px 0px 0px;
-    height: 500px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-}
-
-.toggledDiv {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-}
-
-h4 {
-    flex-basis: 80%;
-}
-
-.openOutcomeDialogs {
-    flex-basis: 10%;
-    margin: auto;
-    border: 0px;
-    background-color: #F6F6F6;
-    height: fit-content;
-}
-
